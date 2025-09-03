@@ -34,6 +34,7 @@ class AdminPanelProvider extends PanelProvider
             ->tenant(Team::class)
             ->topNavigation()
             ->topbarLivewireComponent(CustomTopbar::class)
+            ->viteTheme('resources/css/filament/admin/theme.css')
             ->tenantRegistration(RegisterTeam::class)
             ->colors([
                 'primary' => Color::Amber,
