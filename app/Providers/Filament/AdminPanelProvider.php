@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\Tenancy\RegisterTeam;
+use App\Livewire\CustomTopbar;
 use App\Models\Team;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -32,6 +33,7 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->tenant(Team::class)
             ->topNavigation()
+            ->topbarLivewireComponent(CustomTopbar::class)
             ->tenantRegistration(RegisterTeam::class)
             ->colors([
                 'primary' => Color::Amber,
