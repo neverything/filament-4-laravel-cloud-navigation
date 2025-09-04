@@ -102,7 +102,7 @@
         {{-- Custom Team and Catalog Navigation --}}
         <div class="lg:flex items-center gap-x-4 hidden">
             {{-- Team Switcher --}}
-            <x-tenant-menu.custom-tenant-menu/>
+            <x-filament-panels::tenant-menu/>
 
             @if($hasNavigation)
                 @foreach ($navigation as $group)
